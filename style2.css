@@ -1,0 +1,51 @@
+
+
+article{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+
+}
+
+.clip{
+    clip-path: polygon(75% 0%, 0 52%, 75% 100%, 0% 100%, 75% 50%, 0% 0%);
+}
+
+.driehoek{
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.driehoek:first-of-type:hover{
+    clip-path: polygon(50% 19%, 0 76%, 100% 76%);
+}
+
+div:nth-of-type(2){
+    width: 175px;
+    height: 175px;   
+    background-color: green;
+
+}
+
+
+.box2{
+    width: 175px;
+    height: 175px;
+    background-color: red;
+ 
+
+}
+.box2:hover{
+    animation: 1s polygon;
+
+}
+
+
+
+
+@keyframes polygon {
+    0% { clip-path: inset(0); }
+    100% { clip-path: inset(100% 0 0 0); }
+}
